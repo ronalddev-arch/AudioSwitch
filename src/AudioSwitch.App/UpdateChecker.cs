@@ -40,7 +40,8 @@ sealed class UpdateChecker : IDisposable
         else if (AppInfo.RepositoryUrl is not { } repo) State = UpdateState.NotConfigured;
         else
         {
-            _manager = new UpdateManager(new GithubSource(repo, accessToken: null, prerelease: false));
+            // A pre-release build (1.0.0-beta.1) also takes newer pre-releases; a stable build only stable releases.
+            _manager = new UpdateManager(new GithubSource(repo, accessToken: null, prerelease: AppInfo.Version.Contains('-')));
             State = UpdateState.NotChecked;
             _ = RunScheduleAsync();
         }
