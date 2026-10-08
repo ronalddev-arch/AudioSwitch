@@ -1,0 +1,25 @@
+﻿<Project>
+  <PropertyGroup>
+    <Version>1.0.0-beta.1</Version>
+    <!-- ';'-separated; shown in the About window. -->
+    <Authors>Ronald Meeske;Claude (Anthropic)</Authors>
+    <Product>AudioSwitch</Product>
+    <Description>Switches the Windows default audio device, and SteelSeries Sonar's routing when it is installed, when a device connects or disconnects.</Description>
+
+    <!-- SteelSeries versions this release was verified working against. Sonar's API is unofficial and
+         reverse-engineered, so re-verify and update these on every release. -->
+    <VerifiedGgVersion>121.0.0</VerifiedGgVersion>
+    <VerifiedSonarVersion>1.104.0.0</VerifiedSonarVersion>
+
+    <!-- GitHub repository whose Releases hold the installer and update packages (tools/pack.ps1, vpk upload github),
+         and where installed copies look for updates. Empty: the app reports updates as "not configured". -->
+    <RepositoryUrl>https://github.com/ronalddev-arch/AudioSwitch</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyMetadata Include="Authors" Value="$(Authors)" />
+    <AssemblyMetadata Include="VerifiedGgVersion" Value="$(VerifiedGgVersion)" />
+    <AssemblyMetadata Include="VerifiedSonarVersion" Value="$(VerifiedSonarVersion)" />
+    <AssemblyMetadata Include="RepositoryUrl" Value="$(RepositoryUrl)" />
+  </ItemGroup>
+</Project>

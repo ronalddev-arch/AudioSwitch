@@ -1,0 +1,53 @@
+AudioSwitch
+Copyright 2026 Ronald Meeske
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+AudioSwitch is an independent project. It is not affiliated with, endorsed by
+or supported by SteelSeries. "SteelSeries", "SteelSeries GG" and "Sonar" are
+trademarks of their respective owners. AudioSwitch talks to Sonar through an
+unofficial, undocumented local API.
+
+-------------------------------------------------------------------------------
+Third-party components
+-------------------------------------------------------------------------------
+
+The AudioSwitch application uses the following NuGet packages. Their licenses
+are taken from each package's nuspec.
+
+NAudio.Wasapi 3.1.0 and NAudio.Core 3.1.0
+  Copyright (c) Mark Heath
+  License: MIT
+  https://github.com/naudio/NAudio
+
+Serilog 4.2.0
+  Copyright (c) Serilog Contributors
+  License: Apache License, Version 2.0
+  https://github.com/serilog/serilog
+
+Serilog.Extensions.Logging 10.0.0
+  Copyright (c) Microsoft and Serilog Contributors
+  License: Apache License, Version 2.0
+  https://github.com/serilog/serilog-extensions-logging
+
+Serilog.Sinks.File 7.0.0
+  Copyright (c) Serilog Contributors
+  License: Apache License, Version 2.0
+  https://github.com/serilog/serilog-sinks-file
+
+Velopack 1.2.161 (installer and updates; also its Setup.exe, Update.exe and
+launcher stub, which tools/pack.ps1 bundles into the release)
+  Copyright (c) Velopack Ltd.
+  License: MIT
+  https://github.com/velopack/velopack
+
+Microsoft.Extensions.Logging.Abstractions 10.0.12, Microsoft.Extensions.Logging,
+Microsoft.Extensions.DependencyInjection.Abstractions, Microsoft.Extensions.Options,
+System.Numerics.Tensors and other packages of the .NET runtime libraries
+  Copyright (c) .NET Foundation and Contributors / Microsoft Corporation
+  License: MIT
+  https://github.com/dotnet/runtime
+
+The test project additionally uses xunit (Apache-2.0), xunit.runner.visualstudio
+(Apache-2.0), Microsoft.NET.Test.Sdk (MIT) and coverlet.collector (MIT). These
+are not shipped with the application.
